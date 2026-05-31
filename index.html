@@ -1,95 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KT Plumbing® Ltd | Plumbing, Heating & Air Conditioning</title>
-<meta name="description" content="Professional plumbing, heating and air conditioning services. Book online with KT Plumbing Ltd.">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KT Plumbing | Heating & Air Conditioning Specialists</title>
+
+<meta name="description" content="KT Plumbing - Plumbing, Heating & Air Conditioning specialists in Cobham. Book trusted engineers for installations, repairs, and diagnostics." />
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#0f172a;color:#fff}
-nav{position:sticky;top:0;background:#111827;padding:18px 5%;display:flex;justify-content:space-between}
-a{text-decoration:none}
-.btn{background:#06b6d4;color:#fff;padding:12px 20px;border-radius:8px}
-.hero{padding:100px 5%;text-align:center;background:linear-gradient(135deg,#0f172a,#1e293b)}
-section{padding:70px 5%}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.card{background:#1e293b;padding:24px;border-radius:12px}
-form{max-width:900px;margin:auto;background:#1e293b;padding:25px;border-radius:12px}
-input,select,textarea{width:100%;padding:12px;margin:8px 0;border-radius:8px;border:none}
-button{background:#06b6d4;color:#fff;border:none;padding:14px 20px;border-radius:8px;cursor:pointer}
-footer{padding:30px;text-align:center;background:#111827}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif;}
+body{background:#f6f8fb;color:#1a1a1a;line-height:1.6;}
+
+nav{
+position:fixed;top:0;left:0;width:100%;
+background:#fff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 28px;
+box-shadow:0 4px 20px rgba(0,0,0,0.08);
+z-index:1000;
+}
+
+.logo{font-weight:700;font-size:20px;color:#0a66c2;cursor:pointer;}
+
+nav ul{display:flex;gap:18px;list-style:none;}
+nav ul li{font-size:14px;opacity:0.8;}
+
+.cta-btn{
+background:#0a66c2;
+color:#fff;
+padding:10px 16px;
+border-radius:8px;
+font-weight:600;
+}
+
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),
+url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') center/cover;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#fff;
+padding:20px;
+}
+
+.hero h1{font-size:44px;max-width:900px;}
+.hero p{margin-top:14px;opacity:0.9;max-width:700px;}
+
+.buttons{margin-top:25px;display:flex;gap:12px;flex-wrap:wrap;}
+
+.btn{
+padding:12px 18px;
+border-radius:8px;
+font-weight:600;
+text-decoration:none;
+display:inline-block;
+}
+
+.btn-primary{background:#0a66c2;color:#fff;}
+.btn-outline{border:2px solid #fff;color:#fff;}
+
+section{padding:70px 20px;max-width:1100px;margin:auto;}
+
+h2{text-align:center;margin-bottom:40px;font-size:30px;}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:#fff;
+padding:22px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.06);
+}
+
+.card h3{color:#0a66c2;margin-bottom:8px;}
+
+.ac{
+background:#0a66c2;
+color:#fff;
+padding:40px;
+border-radius:14px;
+text-align:center;
+}
+
+form{
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+display:grid;
+gap:12px;
+}
+
+input,select,textarea{
+padding:10px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:14px;
+}
+
+button{
+background:#0a66c2;
+color:#fff;
+border:none;
+padding:12px;
+border-radius:8px;
+font-weight:600;
+cursor:pointer;
+}
+
+.faq-item{
+background:#fff;
+margin-bottom:10px;
+padding:15px;
+border-radius:10px;
+cursor:pointer;
+box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.faq-answer{display:none;margin-top:8px;color:#555;}
+
+footer{
+background:#111;
+color:#fff;
+text-align:center;
+padding:30px;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:30px;}
+nav ul{display:none;}
+}
 </style>
 </head>
+
 <body>
+
 <nav>
-<div><strong>KT Plumbing® Ltd</strong></div>
-<div><a class="btn" href="#book">Book Now</a></div>
+<div class="logo" onclick="scrollTopPage()">KT Plumbing</div>
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#booking">Booking</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+<a class="cta-btn" href="#booking">Book Now</a>
 </nav>
 
 <div class="hero">
-<h1>More Than Just A Plumber</h1>
-<p>Plumbing • Heating • Air Conditioning • Repairs • Installations • Maintenance</p>
-<a class="btn" href="#book">Book Service</a>
+<h1>Plumbing, Heating & Air Conditioning Specialists in Cobham</h1>
+<p>F-Gas registered engineers providing reliable installations, repairs & diagnostics with guaranteed workmanship.</p>
+
+<div class="buttons">
+<a class="btn btn-primary" href="#booking">Book Now</a>
+<a class="btn btn-outline" href="tel:07907810893">Call Now</a>
+</div>
 </div>
 
-<section>
+<section id="services">
 <h2>Our Services</h2>
-<div class="grid">
-<div class="card"><h3>Plumbing</h3><p>Leaks, taps, toilets, pumps, valves and full installations.</p></div>
-<div class="card"><h3>Heating</h3><p>Radiators, heating pumps, upgrades and diagnostics.</p></div>
-<div class="card"><h3>Air Conditioning</h3><p>Split & multi-split systems from leading brands.</p></div>
-<div class="card"><h3>Investigations</h3><p>Professional diagnostics from £120 incl. VAT.</p></div>
+
+<div class="services">
+<div class="card">
+<h3>Plumbing</h3>
+<p>Repairs, leaks, installs & maintenance.</p>
+</div>
+
+<div class="card">
+<h3>Heating</h3>
+<p>Radiators, boilers & system servicing.</p>
+</div>
+
+<div class="card">
+<h3>Air Conditioning</h3>
+<p>Installation & servicing of premium AC systems.</p>
+</div>
+
+<div class="card">
+<h3>Diagnostics</h3>
+<p>Leak detection & system investigations.</p>
+</div>
 </div>
 </section>
 
-<section>
-<h2>Why Choose KT Plumbing?</h2>
-<div class="grid">
-<div class="card">F-Gas Registered</div>
-<div class="card">Premium Materials</div>
-<div class="card">6 Month Warranty</div>
-<div class="card">Free Estimates</div>
-</div>
+<section class="ac">
+<h2>Air Conditioning Installation</h2>
+<p>High-efficiency split & multi-split systems installed from £1,450. Premium brands, professional fitting, full warranty.</p>
 </section>
 
-<section id="book">
-<h2>Book Now</h2>
-<form onsubmit="event.preventDefault(); alert('Booking request submitted. Connect this form to Formspree or your backend to receive enquiries.');">
-<input required placeholder="Full Name">
-<input required type="email" placeholder="Email">
-<input required placeholder="Phone Number">
-<input required placeholder="Address">
-<select required>
-<option value="">Select Service Type</option>
+<section id="booking">
+<h2>Book a Service</h2>
+
+<form id="bookingForm">
+<input id="name" type="text" placeholder="Full Name" required />
+<input id="phone" type="tel" placeholder="Phone" required />
+<input id="email" type="email" placeholder="Email (optional)" />
+
+<select id="service">
 <option>General Plumbing</option>
-<option>Leak Repair</option>
 <option>Heating Repair</option>
-<option>Air Conditioning Installation</option>
-<option>Air Conditioning Service</option>
-<option>Bathroom Plumbing</option>
+<option>Air Conditioning Install</option>
+<option>Diagnostics</option>
 <option>Emergency Callout</option>
 </select>
-<input required type="date">
-<input required type="time">
-<select required>
-<option value="">Payment Preference</option>
-<option>Cash</option>
-<option>Card</option>
-<option>Bank Transfer</option>
-</select>
-<textarea rows="5" placeholder="Additional Notes"></textarea>
-<button type="submit">Submit Booking Request</button>
+
+<textarea id="details" placeholder="Additional Details"></textarea>
+
+<button type="submit">Send Booking via WhatsApp</button>
 </form>
 </section>
 
-<section>
-<h2>Contact</h2>
-<p>Email: info@ktplumbing.co.uk</p>
-<p>Phone: 07907810893</p>
-<p>Location: Cobham</p>
-<a class="btn" href="#book">Book Now</a>
+<section id="faq">
+<h2>FAQ</h2>
+
+<div class="faq-item" onclick="toggleFAQ(this)">
+<strong>Do you provide free estimates?</strong>
+<div class="faq-answer">Yes, we provide free estimates before any work begins.</div>
+</div>
+
+<div class="faq-item" onclick="toggleFAQ(this)">
+<strong>Are you F-Gas certified?</strong>
+<div class="faq-answer">Yes, fully certified for all air conditioning work.</div>
+</div>
+
+<div class="faq-item" onclick="toggleFAQ(this)">
+<strong>Do you offer warranties?</strong>
+<div class="faq-answer">Yes, all work includes a 6-month workmanship warranty.</div>
+</div>
+
+<div class="faq-item" onclick="toggleFAQ(this)">
+<strong>How fast can you attend?</strong>
+<div class="faq-answer">Usually same-day or next-day depending on availability.</div>
+</div>
+
 </section>
 
-<footer>© KT Plumbing® Ltd</footer>
+<footer>
+<p>KT Plumbing © 2026 | Plumbing, Heating & Air Conditioning Specialists</p>
+</footer>
+
+<script>
+const phoneNumber = "447907810893";
+
+function scrollTopPage(){
+window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function toggleFAQ(el){
+const answer = el.querySelector(".faq-answer");
+answer.style.display = answer.style.display === "block" ? "none" : "block";
+}
+
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+const name = document.getElementById("name").value;
+const phone = document.getElementById("phone").value;
+const email = document.getElementById("email").value;
+const service = document.getElementById("service").value;
+const details = document.getElementById("details").value;
+
+const message =
+`NEW BOOKING
+Name: ${name}
+Phone: ${phone}
+Email: ${email}
+Service: ${service}
+Details: ${details}`;
+
+const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+window.location.href = url;
+});
+</script>
+
 </body>
 </html>
